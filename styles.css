@@ -7,6 +7,66 @@
   grid-template-columns: 30% auto;
   background-color: red;
 }
+.nav-wrapper ul li {
+  display: inline;
+  list-style-type: none;
+}
+.main-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
 .burger-icon {
   display: none;
+}
+
+.wrapper {
+  max-width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat (3, 1fr);
+  grid-gap: 10px;
+  grid-template-areas:
+    "featuredMain featuredMain featuredSub"
+    "contentMain contentMain contentSub";
+}
+.featured {
+  grid-area: featuredMain;
+  min-height: 500px;
+  background-color: purple;
+}
+.sub-featured {
+  grid-area: featuredSub;
+  background-color: blue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+.sub1 {
+  background-color: green;
+}
+.sub2 {
+  background-color: green;
+}
+.sub3 {
+  background-color: green;
+}
+.main-content {
+  grid-area: contentMain;
+  background-color: orange;
+}
+.main-sidebar {
+  grid-area: contentSub;
+  background-color: yellow;
+}
+.footer {
+  display: grid;
+  margin: auto;
+  grid-template-columns:
+    minmax(20px, 300px) minmax(20px, 300px) minmax(20px, 300px)
+    minmax(20px, 300px);
+  justify-content: center;
+  grid-template-rows: 1fr 1fr;
+  background-color: #333;
+  color: #fff;
 }
