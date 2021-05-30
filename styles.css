@@ -1,3 +1,9 @@
+body {
+  font-family: "Prompt", sans-serif;
+  background-image: url(images/60.-Zircon.jpg);
+  background-size: cover;
+}
+
 .nav-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -5,7 +11,25 @@
   margin-top: 30px;
   display: grid;
   grid-template-columns: 30% auto;
-  background-color: red;
+}
+.nav-wrapper a {
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+.nav-wrapper a:hover {
+  cursor: pointer;
+  color: #eee;
+}
+.list-item {
+  margin-left: 10px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.logo {
+  font-weight: bold;
+  font-size: 24px;
 }
 .nav-wrapper ul li {
   display: inline;
@@ -30,10 +54,21 @@
     "featuredMain featuredMain featuredSub"
     "contentMain contentMain contentSub";
 }
+.wrapper > .featured,
+.wrapper > .sub-featured > div,
+.wrapper > .main-content,
+.wrapper > .main-sidebar {
+  padding: 20px;
+}
 .featured {
   grid-area: featuredMain;
   min-height: 500px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)) border-box,
+    url(https://images.unsplash.com/photo-1574279606130-09958dc756f7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tZW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60/)
+      no-repeat center center;
   background-color: purple;
+  display: grid;
+  align-content: flex-end;
 }
 .sub-featured {
   grid-area: featuredSub;
